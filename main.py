@@ -13,6 +13,11 @@ cilent = Groq(
     api_key=os.getenv("GROQ_API_KEY")
 )
 
+@app.get("/")
+def home():
+    return {"message": "Backend Running Successfully"}
+
+    
 @app.post("/generate")
 def generate_content(topic:str,technology:str,content_type:str,tone:str):
     prompt = f"""

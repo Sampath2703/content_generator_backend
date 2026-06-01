@@ -35,8 +35,8 @@ def generate_content(topic:str,technology:str,content_type:str,tone:str):
     - Return only the content.
 """
     response = cilent.chat.completions.create(
-        model = "llama-3.3-70b-versatile"
-        message = [
+        model = "llama-3.3-70b-versatile",
+        messages = [
             {
                 "role":"user",
                 "content":prompt

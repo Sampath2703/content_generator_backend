@@ -10,7 +10,7 @@ app = FastAPI()
 
 
 cilent = Groq(
-    api_key=os.getenv("api_key")
+    api_key=os.getenv("GROQ_API_KEY")
 )
 
 @app.post("/generate")
